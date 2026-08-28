@@ -38,7 +38,7 @@ const skills = [
 
 export function Skills() {
   const [active, setActive] = useState(0);
-  const current = skills[active];
+  const current = skills[active] ?? skills[0]!;
 
   return (
     <Section id="skills">
