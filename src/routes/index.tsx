@@ -5,6 +5,14 @@ import { Hero } from "@/components/scorely/hero";
 import { StatementStrip } from "@/components/scorely/marquee";
 import { Skills } from "@/components/scorely/skills";
 import { AITutor } from "@/components/scorely/ai-tutor";
+import { Papers } from "@/components/scorely/papers";
+import { WhatStays } from "@/components/scorely/what-stays";
+import { BandJourney } from "@/components/scorely/band-journey";
+import { HowItWorks } from "@/components/scorely/how-it-works";
+import { WhyScorely } from "@/components/scorely/why-scorely";
+import { ForWho } from "@/components/scorely/for-who";
+import { FAQ } from "@/components/scorely/faq";
+import { FinalCta, Footer } from "@/components/scorely/final-cta";
 
 const title = "Scorely — Free IELTS Practice with AI Feedback";
 const description =
@@ -26,14 +34,23 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen overflow-x-hidden bg-background text-foreground">
       <Nav />
       <main>
         <Hero />
         <StatementStrip />
         <Skills />
         <AITutor />
+        <Papers />
+        <WhatStays />
+        <BandJourney />
+        <HowItWorks />
+        <WhyScorely />
+        <ForWho />
+        <FAQ />
+        <FinalCta />
       </main>
+      <Footer />
     </div>
   );
 }
