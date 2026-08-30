@@ -38,7 +38,7 @@ function Bubble({
 
 export function AITutor() {
   return (
-    <Section id="ai-tutor" className="bg-secondary/40">
+    <Section id="ai-tutor" className="scroll-mt-24 bg-secondary/40">
       <div className="grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
         <SectionHeading
           eyebrow="02 — The tutor"

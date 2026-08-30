@@ -25,7 +25,7 @@ export function Papers() {
   const [active, setActive] = useState(0);
 
   return (
-    <Section id="papers">
+    <Section id="practice" className="scroll-mt-24">
       <SectionHeading
         eyebrow="03 — The paper"
         title="Academic or General. Same tools."

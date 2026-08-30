@@ -41,7 +41,7 @@ export function Skills() {
   const current = skills[active] ?? skills[0]!;
 
   return (
-    <Section id="skills">
+    <Section id="skills" className="scroll-mt-24">
       <SectionHeading
         eyebrow="01 — The desk"
         title="Train for the exam you will actually take."
