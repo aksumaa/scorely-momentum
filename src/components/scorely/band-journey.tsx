@@ -15,7 +15,7 @@ export function BandJourney() {
     <Section>
       <SectionHeading
         eyebrow="The journey"
-        title="From where you are to where you are heading."
+        title="From where you are → toward your target."
         description="A preparation path, not a promise. You practise, the tutor points at the next step, and the band you record moves because the work moved."
         align="center"
       />
@@ -60,10 +60,10 @@ export function BandJourney() {
               return (
                 <motion.div
                   key={b}
-                  initial={{ opacity: 0, y: 30, rotateX: 20 }}
-                  whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
+                  initial={{ opacity: 0, y: 30, rotateX: 20, scale: 0.8 }}
+                  whileInView={{ opacity: 1, y: 0, rotateX: 0, scale: [0.8, 1.16, 1] }}
                   viewport={{ once: true, margin: "-60px" }}
-                  transition={{ duration: 0.6, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
+                  transition={{ duration: 0.75, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
                   className="flex flex-col items-center"
                 >
                   <span

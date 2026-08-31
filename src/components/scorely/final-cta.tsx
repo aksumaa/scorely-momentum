@@ -1,21 +1,32 @@
+import { useRef } from "react";
 import { ArrowRight } from "lucide-react";
-import { motion } from "motion/react";
+import { motion, useScroll, useTransform } from "motion/react";
 import { CompassMark, Wordmark } from "./brand";
 import { CtaButton } from "./cta-button";
 import { SCORELY_URL, Reveal } from "./primitives";
 
 export function FinalCta() {
+  const ref = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
+  const rotate = useTransform(scrollYProgress, [0, 1], [-25, 25]);
+  const scale = useTransform(scrollYProgress, [0, 0.5, 1], [0.9, 1.05, 0.95]);
+
   return (
-    <section id="start" className="relative scroll-mt-24 overflow-hidden bg-primary px-5 py-24 text-primary-foreground sm:px-8 md:py-32">
+    <section
+      id="start"
+      ref={ref}
+      className="relative scroll-mt-24 overflow-hidden bg-primary px-5 py-24 text-primary-foreground sm:px-8 md:py-32"
+    >
       <motion.div
         aria-hidden="true"
-        initial={{ opacity: 0, scale: 0.9, rotate: -8 }}
-        whileInView={{ opacity: 0.12, scale: 1, rotate: 0 }}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 0.14 }}
         viewport={{ once: true }}
         transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1] }}
+        style={{ rotate, scale }}
         className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
       >
-        <CompassMark className="h-[36rem] w-[36rem] text-primary-foreground" />
+        <CompassMark className="h-[36rem] w-[36rem] text-primary-foreground drop-shadow-[0_0_80px_rgba(255,255,255,0.35)]" />
       </motion.div>
 
       <div className="relative mx-auto w-full max-w-3xl text-center">

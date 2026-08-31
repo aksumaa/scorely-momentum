@@ -10,6 +10,7 @@ import { WhatStays } from "@/components/scorely/what-stays";
 import { BandJourney } from "@/components/scorely/band-journey";
 import { HowItWorks } from "@/components/scorely/how-it-works";
 import { WhyScorely } from "@/components/scorely/why-scorely";
+import { FreeAccess } from "@/components/scorely/free-access";
 import { ForWho } from "@/components/scorely/for-who";
 import { FAQ } from "@/components/scorely/faq";
 import { FinalCta, Footer } from "@/components/scorely/final-cta";
@@ -47,6 +48,7 @@ function Index() {
         <HowItWorks />
         <WhyScorely />
         <ForWho />
+        <FreeAccess />
         <FAQ />
         <FinalCta />
       </main>
