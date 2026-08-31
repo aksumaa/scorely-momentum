@@ -38,9 +38,17 @@ export function Nav() {
           scrolled ? "h-14" : "h-20",
         )}
       >
-        <a href="#top" className="flex min-w-0 items-center" aria-label="Scorely home">
+        <motion.a
+          href="#top"
+          initial={{ opacity: 0, y: -8 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          whileHover={{ scale: 1.04 }}
+          className="flex min-w-0 items-center transition-[filter] duration-300 hover:drop-shadow-[0_0_12px_color-mix(in_oklab,var(--primary)_45%,transparent)]"
+          aria-label="Scorely home"
+        >
           <Wordmark />
-        </a>
+        </motion.a>
 
         <ul className="hidden justify-center gap-1 lg:flex">
           {links.map((l) => (

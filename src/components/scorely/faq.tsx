@@ -36,7 +36,7 @@ export function FAQ() {
 
   return (
     <Section id="faq" className="scroll-mt-24 bg-secondary/40">
-      <SectionHeading eyebrow="FAQ" title="Questions before you start." />
+      <SectionHeading eyebrow="FAQ" title="Questions in the margin." />
       <div className="mt-12 grid gap-3">
         {faqs.map((f, i) => {
           const isOpen = open === i;
