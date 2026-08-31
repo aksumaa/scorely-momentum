@@ -17,10 +17,7 @@ export function FreeAccess() {
   return (
     <Section id="free" className="scroll-mt-24 overflow-hidden">
       <div className="relative rounded-[32px] border border-border bg-card p-8 shadow-soft sm:p-12">
-        <CompassMark
-          aria-hidden="true"
-          className="pointer-events-none absolute -right-16 -top-16 h-64 w-64 text-primary opacity-[0.07]"
-        />
+        <CompassMark className="pointer-events-none absolute -right-16 -top-16 h-64 w-64 text-primary opacity-[0.07]" />
         <SectionHeading
           eyebrow="Free access"
           title="Every feature. Zero invoice."

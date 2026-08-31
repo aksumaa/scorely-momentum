@@ -1,5 +1,6 @@
+import { useRef } from "react";
 import { ArrowRight } from "lucide-react";
-import { motion } from "motion/react";
+import { motion, useScroll, useTransform } from "motion/react";
 import { CompassMark, Wordmark } from "./brand";
 import { CtaButton } from "./cta-button";
 import { SCORELY_URL, Reveal } from "./primitives";
