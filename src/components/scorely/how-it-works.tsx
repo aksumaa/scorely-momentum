@@ -165,7 +165,7 @@ export function HowItWorks() {
           />
           <motion.div
             aria-hidden="true"
-            style={reduced ? undefined : { rotate: compassRotate, x: compassX }}
+            style={reduced ? {} : { rotate: compassRotate, x: compassX }}
             className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.06]"
           >
             <CompassMark className="h-[30rem] w-[30rem] text-primary" />
@@ -200,7 +200,7 @@ export function HowItWorks() {
             {/* desk */}
             <div className="relative [perspective:1500px]">
               <motion.div
-                style={reduced ? undefined : { rotateY: deskRotate }}
+                style={reduced ? {} : { rotateY: deskRotate }}
                 className="relative mx-auto aspect-[4/3.4] w-full max-w-md rounded-[28px] border border-border bg-card/70 p-3 shadow-lift backdrop-blur sm:aspect-[4/3] sm:p-4"
               >
                 <div className="mb-3 flex items-center justify-between px-1">
@@ -225,8 +225,8 @@ export function HowItWorks() {
                       {skillCards.map((c, i) => (
                         <motion.div
                           key={c.label}
-                          style={reduced || i > 1 ? undefined : { scale: heroScale }}
-                          className={i > 1 ? "opacity-60" : undefined}
+                          style={reduced || i > 1 ? {} : { scale: heroScale }}
+                          className={i > 1 ? "opacity-60" : ""}
                         >
                           <SkillCard {...c} hero={i === 0} />
                         </motion.div>
@@ -244,7 +244,7 @@ export function HowItWorks() {
                 {stages.map((st, i) => (
                   <motion.span
                     key={st.n}
-                    style={reduced ? undefined : { opacity: [s1, s2, s3][i]! }}
+                    style={reduced ? {} : { opacity: [s1, s2, s3][i]! }}
                     className="h-1.5 w-10 rounded-full bg-primary"
                   />
                 ))}
