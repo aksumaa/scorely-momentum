@@ -2,7 +2,8 @@ import { motion } from "motion/react";
 import type { ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
-export const SCORELY_URL = "https://scorely.uz/";
+export const SCORELY_SITE = "https://scorely.uz/";
+export const SCORELY_URL = "https://scorely.uz/login";
 
 export function Reveal({
   children,
