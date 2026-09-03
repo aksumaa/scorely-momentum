@@ -75,8 +75,8 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.16, ease: [0.16, 1, 0.3, 1] }}
             className="mt-6 max-w-lg text-base leading-relaxed text-muted-foreground sm:text-lg"
           >
-            Practise Speaking, Writing, Reading and Listening with realistic IELTS tasks, AI-powered guidance and
-            progress that sits beside your work — Academic or General Training, always free.
+            Practise Speaking, Writing, Reading and Listening with AI guidance and progress tracking built around
+            your IELTS preparation.
           </motion.p>
 
           <motion.div
